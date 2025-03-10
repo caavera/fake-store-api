@@ -1,0 +1,34 @@
+{
+  "name": "fake-store-api",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "API"
+  ],
+  "homepage": "https://github.com/caavera/fake-store-api#readme",
+  "bugs": {
+    "url": "https://github.com/caavera/fake-store-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caavera/fake-store-api.git"
+  },
+  "license": "MIT",
+  "author": "Carlos Vera <veracar111@gmail.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.3"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
