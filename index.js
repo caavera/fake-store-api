@@ -11,7 +11,22 @@ app.get('/new-route', (req,res) => {
 });
 
 app.get('/products', (req,res) => {
+  res.json([
+    {
+      name: 'product 1',
+      price: 1000
+    },
+    {
+      name: 'product 1',
+      price: 1000
+    }
+  ]);
+});
+
+app.get('/products/:id', (req,res) => {
+  const { id } = req.params;
   res.json({
+    id,
     name: 'product 1',
     price: 1000
   });
