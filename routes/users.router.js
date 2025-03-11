@@ -1,34 +1,43 @@
 const express = require('express');
-const { faker } = require('@faker-js/faker');
+const UsersService = require('../services/users.service');
 
 const router = express.Router();
+const service = new UsersService();
 
 router.get('/', (req, res) => {
-  const users = [];
-  const { size } = req.query;
-  const limit = size || 10;
-  for (let i = 0; i < limit; i++) {
-    users.push({
-      id: faker.string.uuid(),
-      name: faker.person.fullName(),
-      email: faker.internet.email(),
-      avatar: faker.image.avatar(),
-    });
-  }
+  const users = service.find();
   res.json(users);
-});
-
-router.get('/filter', (req, res) => {
-  res.send('Hello, I am a user filter');
 });
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
+  const user = service.findOne(id);
+  res.json(user);
+});
+
+router.post('/', (req, res) => {
+  const body = req.body;
+  res.status(201).json({
+    message: 'User created',
+    data: body
+  });
+});
+
+router.patch('/:id', (req, res) => {
+  const { id } = req.params;
+  const body = req.body;
   res.json({
-    id,
-    name: faker.person.fullName(),
-    email: faker.internet.email(),
-    avatar: faker.image.avatar(),
+    message: 'User updated',
+    data: body,
+    id
+  });
+});
+
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  res.json({
+    message: 'User deleted',
+    id
   });
 });
 
