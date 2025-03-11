@@ -25,11 +25,36 @@ class CategoriesService {
     return this.categories.find(category => category.id === id);
   }
 
-  create() {}
+  create(data) {
+    const newCategory = {
+      id: faker.string.uuid(),
+      ...data
+    };
+    this.categories.push(newCategory);
+    return newCategory;
+  }
 
-  update() {}
+  update(id, changes) {
+    const index = this.categories.findIndex(category => category.id === id);
+    if (index === -1) {
+      throw new Error('Category not found');
+    }
+    const category = this.categories[index];
+    this.categories[index] = {
+      ...category,
+      ...changes
+    };
+    return this.categories[index];
+  }
 
-  delete() {}
+  delete(id) {
+    const index = this.categories.findIndex(category => category.id === id);
+    if (index === -1) {
+      throw new Error('Category not found');
+    }
+    this.categories.splice(index, 1);
+    return { id };
+  }
 }
 
 module.exports = CategoriesService;
