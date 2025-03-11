@@ -9,6 +9,7 @@ router.get('/', (req,res) => {
   const limit = size || 10;
   for (let i = 0; i < limit; i++) {
     products.push({
+      id: faker.string.uuid(),
       name: faker.commerce.productName(),
       price: parseInt(faker.commerce.price(), 10),
       imag: faker.image.url()
