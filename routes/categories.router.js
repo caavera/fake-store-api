@@ -1,34 +1,43 @@
 const express = require('express');
-const { faker } = require('@faker-js/faker');
+const CategoriesService = require('../services/categories.service');
 
 const router = express.Router();
+const service = new CategoriesService();
 
 router.get('/', (req, res) => {
-  const categories = [];
-  const { size } = req.query;
-  const limit = size || 6;
-  for (let i = 0; i < limit; i++) {
-    categories.push({
-      id: faker.string.uuid(),
-      name: faker.commerce.department(),
-      description: faker.lorem.sentence(),
-      image: faker.image.url(),
-    });
-  }
+  const categories = service.find();
   res.json(categories);
-});
-
-router.get('/filter', (req, res) => {
-  res.send('Hello, I am a category filter');
 });
 
 router.get('/:id', (req, res) => {
   const { id } = req.params;
+  const category = service.findOne(id);
+  res.json(category);
+});
+
+router.post('/', (req, res) => {
+  const body = req.body;
+  res.status(201).json({
+    message: 'Category created',
+    data: body
+  });
+});
+
+router.patch('/:id', (req, res) => {
+  const { id } = req.params;
+  const body = req.body;
   res.json({
-    id,
-    name: faker.commerce.department(),
-    description: faker.lorem.sentence(),
-    image: faker.image.url(),
+    message: 'Category updated',
+    data: body,
+    id
+  });
+});
+
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  res.json({
+    message: 'Category deleted',
+    id
   });
 });
 
