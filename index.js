@@ -4,6 +4,8 @@ const routerApi = require('./routes');
 const app = express();
 const port = process.env.PORT || 3000;
 
+const { logErrors, errorHandler } = require('./middlewares/error.handler');
+
 app.use(express.json());
 
 app.get('/', (req,res) => {
@@ -15,6 +17,9 @@ app.get('/new-route', (req,res) => {
 });
 
 routerApi(app);
+
+app.use(logErrors);
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);

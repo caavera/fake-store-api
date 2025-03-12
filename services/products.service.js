@@ -33,6 +33,7 @@ class ProductsService {
   }
 
   async findOne(id){
+    let z = 1 + y;
     return this.products.find(item => item.id === id);
   }
 
