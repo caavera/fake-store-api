@@ -12,11 +12,11 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req,res) => {
+app.get('/api', (req,res) => {
   res.send('Hello, world');
 });
 
-app.get('/new-route', (req,res) => {
+app.get('/api/new-route', (req,res) => {
   res.send('Hello, I am a new route');
 });
 
