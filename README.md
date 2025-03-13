@@ -8,6 +8,15 @@
 
 This is a RESTful API built with Node.js and Express. It simulates an online store with products, users, and categories, dynamically generated using Faker.js.
 
+## 🌐 Live Demo
+
+You can test the API directly on Vercel:
+
+- **Base URL**: [`https://fake-store-api-brown.vercel.app/api/v1/`](https://fake-store-api-brown.vercel.app/api/v1/)
+- **Products**: [`https://fake-store-api-brown.vercel.app/api/v1/products`](https://fake-store-api-brown.vercel.app/api/v1/products)
+- **Users**: [`https://fake-store-api-brown.vercel.app/api/v1/users`](https://fake-store-api-brown.vercel.app/api/v1/users)
+- **Categories**: [`https://fake-store-api-brown.vercel.app/api/v1/categories`](https://fake-store-api-brown.vercel.app/api/v1/categories)
+
 ## 🔧 Technologies Used
 
 <ul>
@@ -30,7 +39,7 @@ This is a RESTful API built with Node.js and Express. It simulates an online sto
 ## 📌 Endpoints
 
 <details>
-  <summary><strong>📦 Products</strong> (<code>/api/v1/products</code>)</summary>
+  <summary><strong>📦 Products</strong> (<a href="https://fake-store-api-brown.vercel.app/api/v1/products"><code>/api/v1/products</code></a>)</summary>
   <ul>
     <li><code>GET /</code> → Get all products.</li>
     <li><code>GET /:id</code> → Get a product by ID.</li>
@@ -41,7 +50,7 @@ This is a RESTful API built with Node.js and Express. It simulates an online sto
 </details>
 
 <details>
-  <summary><strong>👤 Users</strong> (<code>/api/v1/users</code>)</summary>
+  <summary><strong>👤 Users</strong> (<a href="https://fake-store-api-brown.vercel.app/api/v1/users"><code>/api/v1/users</code></a>)</summary>
   <ul>
     <li><code>GET /</code> → Get all users.</li>
     <li><code>GET /:id</code> → Get a user by ID.</li>
@@ -52,7 +61,7 @@ This is a RESTful API built with Node.js and Express. It simulates an online sto
 </details>
 
 <details>
-  <summary><strong>📂 Categories</strong> (<code>/api/v1/categories</code>)</summary>
+  <summary><strong>📂 Categories</strong> (<a href="https://fake-store-api-brown.vercel.app/api/v1/categories"><code>/api/v1/categories</code></a>)</summary>
   <ul>
     <li><code>GET /</code> → Get all categories.</li>
     <li><code>GET /:id</code> → Get a category by ID.</li>
