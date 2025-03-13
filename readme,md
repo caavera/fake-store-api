@@ -1,72 +1,72 @@
 # Fake Store API
 
-Esta es una API RESTful construida con Node.js y Express. Simula una tienda en línea con productos, usuarios y categorías, generados dinámicamente con Faker.js.
+This is a RESTful API built with Node.js and Express. It simulates an online store with products, users, and categories, dynamically generated using Faker.js.
 
-## 🔧 Tecnologías utilizadas
+## 🔧 Technologies Used
 
-- **Node.js** y **Express** para la creación del servidor.
-- **@faker-js/faker** para generar datos ficticios.
-- **Joi** para la validación de datos.
-- **Boom** para el manejo de errores.
-- **Helmet** para seguridad de cabeceras HTTP.
-- **Cors** para permitir acceso desde cualquier origen.
-- **ESLint** y **Prettier** para mantener el código limpio.
+- **Node.js** and **Express** for the server.
+- **@faker-js/faker** for generating fake data.
+- **Joi** for data validation.
+- **Boom** for error handling.
+- **Helmet** for HTTP security headers.
+- **Cors** to allow access from any origin.
+- **ESLint** and **Prettier** for code formatting and linting.
 
 ## 🛠 Middlewares
 
-- **Manejo de errores con Boom.**
-- **Validación de datos con Joi.**
-- **Uso de Helmet para mayor seguridad.**
-- **Soporte para CORS.**
-- **Parsers de JSON con `express.json()`.**
+- **Error handling with Boom.**
+- **Data validation with Joi.**
+- **Helmet for enhanced security.**
+- **CORS support.**
+- **JSON parsing with `express.json()`.**
 
 ## 📌 Endpoints
 
-### Productos (`/api/v1/products`)
+### Products (`/api/v1/products`)
 
-- `GET /` → Obtener todos los productos.
-- `GET /:id` → Obtener un producto por ID.
-- `POST /` → Crear un nuevo producto.
-- `PATCH /:id` → Actualizar un producto por ID.
-- `DELETE /:id` → Eliminar un producto por ID.
+- `GET /` → Get all products.
+- `GET /:id` → Get a product by ID.
+- `POST /` → Create a new product.
+- `PATCH /:id` → Update a product by ID.
+- `DELETE /:id` → Delete a product by ID.
 
-### Usuarios (`/api/v1/users`)
+### Users (`/api/v1/users`)
 
-- `GET /` → Obtener todos los usuarios.
-- `GET /:id` → Obtener un usuario por ID.
-- `POST /` → Crear un nuevo usuario.
-- `PATCH /:id` → Actualizar un usuario por ID.
-- `DELETE /:id` → Eliminar un usuario por ID.
+- `GET /` → Get all users.
+- `GET /:id` → Get a user by ID.
+- `POST /` → Create a new user.
+- `PATCH /:id` → Update a user by ID.
+- `DELETE /:id` → Delete a user by ID.
 
-### Categorías (`/api/v1/categories`)
+### Categories (`/api/v1/categories`)
 
-- `GET /` → Obtener todas las categorías.
-- `GET /:id` → Obtener una categoría por ID.
-- `POST /` → Crear una nueva categoría.
-- `PATCH /:id` → Actualizar una categoría por ID.
-- `DELETE /:id` → Eliminar una categoría por ID.
+- `GET /` → Get all categories.
+- `GET /:id` → Get a category by ID.
+- `POST /` → Create a new category.
+- `PATCH /:id` → Update a category by ID.
+- `DELETE /:id` → Delete a category by ID.
 
-## 🚀 Instalación
+## 🚀 Installation
 
-1. Clona este repositorio:
+1. Clone this repository:
    ```bash
    git clone https://github.com/caavera/fake-store-api.git
    cd fake-store-api
    ```
 
-2. Instala las dependencias:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Inicia el servidor:
+3. Start the server:
    ```bash
    npm start
    ```
 
-   La API se ejecutará en `http://localhost:3000`.
+   The API will run at `http://localhost:3000`.
 
-## 📝 Autor
+## 📝 Author
 
-Desarrollado por **Carlos Vera**
-[Repositorio en GitHub](https://github.com/caavera/fake-store-api)
+Developed by **Carlos Vera**
+[GitHub Repository](https://github.com/caavera/fake-store-api)
