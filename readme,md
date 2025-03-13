@@ -1,0 +1,72 @@
+# Fake Store API
+
+Esta es una API RESTful construida con Node.js y Express. Simula una tienda en línea con productos, usuarios y categorías, generados dinámicamente con Faker.js.
+
+## 🔧 Tecnologías utilizadas
+
+- **Node.js** y **Express** para la creación del servidor.
+- **@faker-js/faker** para generar datos ficticios.
+- **Joi** para la validación de datos.
+- **Boom** para el manejo de errores.
+- **Helmet** para seguridad de cabeceras HTTP.
+- **Cors** para permitir acceso desde cualquier origen.
+- **ESLint** y **Prettier** para mantener el código limpio.
+
+## 🛠 Middlewares
+
+- **Manejo de errores con Boom.**
+- **Validación de datos con Joi.**
+- **Uso de Helmet para mayor seguridad.**
+- **Soporte para CORS.**
+- **Parsers de JSON con `express.json()`.**
+
+## 📌 Endpoints
+
+### Productos (`/api/v1/products`)
+
+- `GET /` → Obtener todos los productos.
+- `GET /:id` → Obtener un producto por ID.
+- `POST /` → Crear un nuevo producto.
+- `PATCH /:id` → Actualizar un producto por ID.
+- `DELETE /:id` → Eliminar un producto por ID.
+
+### Usuarios (`/api/v1/users`)
+
+- `GET /` → Obtener todos los usuarios.
+- `GET /:id` → Obtener un usuario por ID.
+- `POST /` → Crear un nuevo usuario.
+- `PATCH /:id` → Actualizar un usuario por ID.
+- `DELETE /:id` → Eliminar un usuario por ID.
+
+### Categorías (`/api/v1/categories`)
+
+- `GET /` → Obtener todas las categorías.
+- `GET /:id` → Obtener una categoría por ID.
+- `POST /` → Crear una nueva categoría.
+- `PATCH /:id` → Actualizar una categoría por ID.
+- `DELETE /:id` → Eliminar una categoría por ID.
+
+## 🚀 Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/caavera/fake-store-api.git
+   cd fake-store-api
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor:
+   ```bash
+   npm start
+   ```
+
+   La API se ejecutará en `http://localhost:3000`.
+
+## 📝 Autor
+
+Desarrollado por **Carlos Vera**
+[Repositorio en GitHub](https://github.com/caavera/fake-store-api)
